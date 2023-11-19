@@ -85,7 +85,9 @@ function App(props) {
     if (tasks.length - prevTaskLength === -1) {
       listHeadingRef.current.focus();
     }
-  }, [tasks.length, prevTaskLength]);  
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    console.log(JSON.parse(localStorage.getItem("todos")));
+  }, [tasks.length, prevTaskLength, tasks]);  
 
   return (
     <div className="todoapp stack-large">

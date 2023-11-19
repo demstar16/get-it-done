@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-const DATA = [
+const DATA = JSON.parse(localStorage.getItem("tasks")) || [
   { id: "todo-0", name: "Eat", completed: true },
-  { id: "todo-1", name: "Sleep", completed: false },
-  { id: "todo-2", name: "Repeat", completed: false },
+  { id: "todo-1", name: "Drink", completed: false },
+  { id: "todo-2", name: "Study", completed: false },
 ];
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
