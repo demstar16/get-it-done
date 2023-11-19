@@ -86,7 +86,6 @@ function App(props) {
       listHeadingRef.current.focus();
     }
     localStorage.setItem("tasks", JSON.stringify(tasks));
-    console.log(JSON.parse(localStorage.getItem("todos")));
   }, [tasks.length, prevTaskLength, tasks]);  
 
   return (
